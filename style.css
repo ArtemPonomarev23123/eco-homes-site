@@ -1,0 +1,89 @@
+.hero-section {
+    background-image: url("../images/photp119.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    background-attachment: scroll;
+    
+    display: flex;
+    flex-direction: column; /* Контент в колонку */
+    justify-content: center; /* Центрирование по вертикали */
+    align-items: center; /* Центрирование по горизонтали */
+    
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Объединяем одинаковые контейнеры */
+.text-container1,
+.text-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-left: 10%;
+    width: 100%; /* Чтобы padding работал корректно */
+}
+
+
+
+#text2 {
+    color: white;
+    margin: 0;
+}
+
+#text1 {
+    color: rgb(5, 175, 5);
+    margin: 0;
+}
+
+/* Убираем absolute, делаем адаптивно */
+#button1 {
+    border-radius: 20px;
+    padding: 10px 25px;
+    font-size: 12px;
+    transition: transform 0.3s ease;
+    margin-top: 20px;
+}
+
+#button1:hover {
+    transform: scale(1.1);
+}
+
+.navbar {
+    height: 60px;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 60vh;
+        padding: 40px 15px;
+        align-items: flex-start;
+    }
+    
+    .text-container1,
+    .text-container2 {
+        padding-left: 5%; /* Меньше отступ на мобильных */
+        align-items: flex-start; /* Центрируем текст */
+        text-align: left;
+    }
+    
+    #text5 {
+        font-size: 2rem; /* Уменьшаем заголовок */
+    }
+    
+    #text3 {
+        font-size: 1.2rem;
+    }
+    
+    #button1 {
+        width: auto; /* Кнопка на всю ширину */
+        max-width: none; /* Но не больше 200px */
+        align-items: flex-start;
+    }
+}
+
